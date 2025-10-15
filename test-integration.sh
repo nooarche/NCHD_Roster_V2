@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "🧪 Testing HSE NCHD Rostering System Integration"
 echo "================================================="
 
