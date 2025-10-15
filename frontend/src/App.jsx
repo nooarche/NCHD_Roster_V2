@@ -41,11 +41,11 @@ function App() {
       setLoading(true);
       const [postsData, shiftsData] = await Promise.all([
         postsApi.getAll(),
-        // rosterApi.getShifts(), // Uncomment when backend is ready
+        rosterApi.getShifts(), // Uncomment when backend is ready
       ]);
       
       setPosts(postsData);
-      // setShifts(shiftsData); // Uncomment when backend is ready
+      setShifts(shiftsData); // Uncomment when backend is ready
       
       // Mock data for now
       setShifts([
@@ -162,8 +162,8 @@ function App() {
   const handleGenerateRoster = async () => {
     try {
       showNotification('Generating roster...', 'info');
-      // const result = await rosterApi.generateRoster({ month: 1, year: 2026 });
-      // setShifts(result.shifts);
+       const result = await rosterApi.generateRoster({ month: 1, year: 2026 });
+       setShifts(result.shifts);
       showNotification('Roster generated successfully', 'success');
     } catch (error) {
       showNotification('Failed to generate roster: ' + error.message, 'error');
