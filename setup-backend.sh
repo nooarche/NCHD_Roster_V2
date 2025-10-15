@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -e  # Exit on error
 
 echo "🚀 HSE NCHD Rostering System - Backend Setup"
