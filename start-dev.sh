@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "🚀 Starting HSE NCHD Rostering System"
 echo "======================================"
 
