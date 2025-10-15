@@ -7,7 +7,7 @@ class ShiftBase(BaseModel):
     post_id: int
     start: datetime
     end: datetime
-    shift_type: str = Field(..., regex="^(base|day_call|night_call|teaching|supervision)$")
+    shift_type: str = Field(..., pattern="^(base|day_call|night_call|teaching|supervision)$")
     labels: Optional[Dict] = {}
 
 class ShiftCreate(ShiftBase):
