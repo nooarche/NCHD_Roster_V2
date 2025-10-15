@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime, JSON, ForeignKey, Table
 from sqlalchemy.orm import relationship
-from sqlalchemy.dialects.postgresql import JSONB
+# from sqlalchemy.dialects.postgresql import JSONB
 from datetime import datetime
 from .db import Base
 
@@ -34,8 +34,8 @@ class Post(Base):
     grade = Column(String)
     fte = Column(Float, default=1.0)
     status = Column(String, default="ACTIVE_ROSTERABLE")
-    core_hours = Column(JSONB, default={})
-    eligibility = Column(JSONB, default={})
+    core_hours = Column(JSON, default={})
+    eligibility = Column(JSON, default={})
     notes = Column(String)
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
