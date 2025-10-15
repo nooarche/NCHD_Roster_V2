@@ -1,0 +1,20 @@
+// HSE Color Palette - Centralized color constants
+export const colors = {
+  primary: '#0076BD',
+  primaryDark: '#005A8F',
+  secondary: '#00A3A1',
+  success: '#4CAF50',
+  warning: '#FF9800',
+  error: '#D32F2F',
+  background: '#F5F7FA',
+  white: '#FFFFFF',
+  grey50: '#FAFAFA',
+  grey100: '#F5F5F5',
+  grey200: '#E5E5E5',
+  grey300: '#D4D4D4',
+  grey400: '#A3A3A3',
+  grey500: '#737373',
+  grey600: '#525252',
+  grey700: '#404040',
+  text: '#1A1A1A',
+};
