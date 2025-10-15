@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -e
 
 echo "🚀 HSE NCHD Rostering System - Frontend Setup"
