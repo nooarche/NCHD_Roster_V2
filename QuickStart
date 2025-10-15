@@ -1,0 +1,19 @@
+# 1. Setup backend with virtual environment
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python -c "from app.db import Base, engine; Base.metadata.create_all(bind=engine)"
+
+# 2. Start backend (in one terminal)
+uvicorn app.main:app --reload
+
+# 3. Setup frontend (in another terminal)
+cd frontend
+npm install
+
+# 4. Start frontend
+npm run dev
+
+# 5. Open browser
+# Visit: http://localhost:5173
