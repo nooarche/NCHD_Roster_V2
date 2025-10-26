@@ -192,7 +192,56 @@ export const PostForm = ({ post, onSave, onCancel }) => {
           ))}
         </div>
       </div>
-
+<div className="border-t pt-4" style={{ borderColor: colors.grey200 }}>
+  <h3 className="font-semibold mb-4" style={{ color: colors.text }}>
+    Clinic Constraints
+  </h3>
+  <p className="text-sm mb-3" style={{ color: colors.grey600 }}>
+    Select days when this post has OPD clinics (blocks day call on those days and night call the day before)
+  </p>
+  
+  <div className="grid grid-cols-7 gap-2">
+    {daysOfWeek.map(day => {
+      const hasClinic = formData.opd_days?.includes(day) || false;
+      return (
+        <button
+          key={day}
+          type="button"
+          onClick={() => {
+            const current = formData.opd_days || [];
+            const updated = hasClinic 
+              ? current.filter(d => d !== day)
+              : [...current, day];
+            setFormData({ ...formData, opd_days: updated });
+          }}
+          className="px-3 py-2 rounded border text-sm font-medium transition-colors"
+          style={{
+            backgroundColor: hasClinic ? colors.primary : colors.white,
+            color: hasClinic ? colors.white : colors.grey700,
+            borderColor: hasClinic ? colors.primary : colors.grey300,
+          }}
+        >
+          {day}
+        </button>
+      );
+    })}
+  </div>
+  
+  {formData.opd_days?.length > 0 && (
+    <div className="mt-3 p-3 rounded" style={{ backgroundColor: '#FFF3E0' }}>
+      <p className="text-sm" style={{ color: '#E65100' }}>
+        ⚠️ This post will be blocked from:
+        <ul className="list-disc list-inside mt-1">
+          <li>Day call on: {formData.opd_days.join(', ')}</li>
+          <li>Night call on: {formData.opd_days.map(d => {
+            const idx = daysOfWeek.indexOf(d);
+            return daysOfWeek[idx - 1] || daysOfWeek[6];
+          }).join(', ')} (day before clinic)</li>
+        </ul>
+      </p>
+    </div>
+  )}
+</div>
       <div className="flex justify-end gap-3 pt-4 border-t" style={{ borderColor: colors.grey200 }}>
         <Button variant="secondary" onClick={onCancel} disabled={isSaving}>Cancel</Button>
         <Button variant="primary" onClick={handleSubmit} loading={isSaving} icon={Save}>
