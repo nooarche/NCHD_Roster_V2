@@ -17,6 +17,7 @@ export const PostForm = ({ post, onSave, onCancel }) => {
     participates_in_call: post?.call_policy?.participates_in_call ?? true,
     max_nights_per_month: post?.call_policy?.max_nights_per_month || 7,
     min_rest_hours: post?.call_policy?.min_rest_hours || 11,
+    opd_days: post?.eligibility?.clinic_constraints?.opd_days || [],
     core_hours: post?.core_hours || {
       MON: [['09:00', '17:00']],
       TUE: [['09:00', '17:00']],
