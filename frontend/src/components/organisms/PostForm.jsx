@@ -62,6 +62,12 @@ export const PostForm = ({ post, onSave, onCancel }) => {
           day_call_allowed_when_on_site: true,
           night_call_requires_next_day_rest: true,
         },
+       clinic_constraints: formData.opd_days.length > 0 ? {  // NEW
+        opd_days: formData.opd_days,
+        blocks_day_call: true,
+        blocks_night_call_before: true,
+        notes: 'OPD clinic days'
+         } : null,   
         constraints: {
           max_consecutive_days: 6,
           min_rest_between_shifts_hours: parseInt(formData.min_rest_hours),
