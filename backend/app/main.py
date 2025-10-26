@@ -7,8 +7,9 @@ from .db import engine, Base, SessionLocal
 from .seed import seed
 
 # Import routers
-from .routers import posts_router, groups_router
-from .routers.roster import router as roster_router  # NEW!
+from .routers.api import router as posts_router
+from .routers.groups import router as groups_router
+from .routers.roster import router as roster_router
 
 app = FastAPI(title="NCHD Rostering & Leave System API", version="0.2.0")
 
@@ -24,10 +25,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Register routes
-app.include_router(posts_router)    # /posts
-app.include_router(groups_router)   # /groups
-app.include_router(roster_router)   # /roster - NEW!
+# Register routes with /api prefix
+app.include_router(posts_router, prefix="/api", tags=["posts"])
+app.include_router(groups_router, prefix="/api", tags=["groups"])
+app.include_router(roster_router, prefix="/api", tags=["roster"])
 
 @app.get("/health")
 def health():
