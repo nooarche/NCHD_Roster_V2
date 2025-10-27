@@ -16,6 +16,10 @@ trap cleanup EXIT INT TERM
 # Start backend
 echo "Starting backend server..."
 cd backend
+
+# CRITICAL FIX: Activate virtual environment before running uvicorn
+source venv/bin/activate
+
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000 &
 BACKEND_PID=$!
 cd ..
