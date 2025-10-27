@@ -13,25 +13,39 @@ cleanup() {
 
 trap cleanup EXIT INT TERM
 
+# Check if backend venv exists
+if [ ! -d "backend/venv" ]; then
+    echo "❌ Backend virtual environment not found!"
+    echo "Please run: chmod +x setup-backend-fixed.sh && ./setup-backend-fixed.sh"
+    exit 1
+fi
+
 # Start backend
 echo "Starting backend server..."
 cd backend
 
-# CRITICAL FIX: Activate virtual environment before running uvicorn
+# Activate virtual environment and start server
 source venv/bin/activate
-
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000 &
 BACKEND_PID=$!
 cd ..
 
 # Wait for backend to start
-sleep 3
+echo "Waiting for backend to start..."
+sleep 5
 
 # Check if backend is running
 if curl -s http://localhost:8000/health > /dev/null 2>&1; then
     echo "✓ Backend running at http://localhost:8000"
 else
-    echo "⚠️  Backend may not be ready yet..."
+    echo "⚠️  Backend may not be ready yet, checking logs..."
+    sleep 3
+    if curl -s http://localhost:8000/health > /dev/null 2>&1; then
+        echo "✓ Backend running at http://localhost:8000"
+    else
+        echo "❌ Backend failed to start. Check logs above."
+        exit 1
+    fi
 fi
 
 # Start frontend
