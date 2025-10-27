@@ -1,0 +1,240 @@
+[
+  {
+    "title": "Newcastle 1 NCHD",
+    "site": "Newcastle",
+    "grade": "Registrar",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Jawaria Akhtar",
+    "opd_days": ["MON"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Mondays"
+  },
+  {
+    "title": "Newcastle 2 NCHD",
+    "site": "Newcastle",
+    "grade": "Registrar",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Task N Train",
+    "opd_days": ["TUE"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Tuesdays"
+  },
+  {
+    "title": "Greystones 1 BST Trainee",
+    "site": "Greystones",
+    "grade": "BST Trainee",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Task N Train",
+    "opd_days": ["WED"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Wednesdays"
+  },
+  {
+    "title": "Greystones 2 BST Trainee of Woohoo",
+    "site": "Greystones",
+    "grade": "BST Trainee",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Task N Train",
+    "opd_days": ["THU"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Thursdays"
+  },
+  {
+    "title": "Edyta 1 BST Trainee",
+    "site": "Edyta",
+    "grade": "BST Trainee",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Task N Train",
+    "opd_days": ["MON"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Mondays"
+  },
+  {
+    "title": "Edyta 2 BST Trainee",
+    "site": "Edyta",
+    "grade": "BST Trainee",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Task N Train",
+    "opd_days": ["TUE"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Tuesdays"
+  },
+  {
+    "title": "Gorey 1 GP Trainee",
+    "site": "Gorey",
+    "grade": "GP Trainee",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Task N Train",
+    "opd_days": ["WED"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Wednesdays"
+  },
+  {
+    "title": "Gorey 2 GP Trainee",
+    "site": "Gorey",
+    "grade": "GP Trainee",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Lucy O'Sullivan",
+    "opd_days": ["THU"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Thursdays"
+  },
+  {
+    "title": "Bray/Shankill 1 GP Trainee",
+    "site": "Bray/Shankill",
+    "grade": "GP Trainee",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Rebecca Somali",
+    "opd_days": ["MON"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Mondays"
+  },
+  {
+    "title": "Bray/Shankill 2 GP Trainee",
+    "site": "Bray/Shankill",
+    "grade": "GP Trainee",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Holly Kehoe",
+    "opd_days": ["TUE"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Tuesdays"
+  },
+  {
+    "title": "DLHG 1 Registrar",
+    "site": "DLHG",
+    "grade": "Registrar",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Anmol Nazir",
+    "opd_days": ["WED"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Wednesdays"
+  },
+  {
+    "title": "MHID Intern",
+    "site": "MHID",
+    "grade": "Intern",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Holly Kehoe",
+    "opd_days": ["THU"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Thursdays"
+  },
+  {
+    "title": "Wicklow 1 BST Trainee",
+    "site": "Wicklow",
+    "grade": "BST Trainee",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Senan Howley",
+    "opd_days": ["MON"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Mondays"
+  },
+  {
+    "title": "Wicklow 2 BST Trainee",
+    "site": "Wicklow",
+    "grade": "BST Trainee",
+    "fte": 1.0,
+    "status": "ACTIVE_ROSTERABLE",
+    "current_holder": "Holly Kehoe",
+    "opd_days": ["TUE"],
+    "core_hours": {
+      "MON": [["09:00", "17:00"]],
+      "TUE": [["09:00", "17:00"]],
+      "WED": [["09:00", "17:00"]],
+      "THU": [["09:00", "17:00"]],
+      "FRI": [["09:00", "16:00"]]
+    },
+    "notes": "OPD clinic Tuesdays"
+  }
+]
