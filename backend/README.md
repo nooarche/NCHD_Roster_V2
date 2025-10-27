@@ -25,8 +25,11 @@ alembic upgrade head
 
 ### 4. Start Server
 ```bash
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-```
+# Development (with auto-reload)
+uvicorn app.main:app --reload --reload-dir ./app --host 0.0.0.0 --port 8000
+
+# Production (without auto-reload)
+uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 ## API Endpoints
 
