@@ -13,11 +13,11 @@ cleanup() {
 
 trap cleanup EXIT INT TERM
 
-# Start backend with venv excluded from watching
+# Start backend with reload only watching app directory
 echo "Starting backend server..."
 cd backend
 source venv/bin/activate
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000 --reload-exclude 'venv/*' &
+uvicorn app.main:app --reload --reload-dir ./app --host 0.0.0.0 --port 8000 &
 BACKEND_PID=$!
 cd ..
 
@@ -29,7 +29,7 @@ sleep 5
 if curl -s http://localhost:8000/health > /dev/null 2>&1; then
     echo "✓ Backend running at http://localhost:8000"
 else
-    echo "⚠️  Backend may not be ready yet, check logs above"
+    echo "⚠️  Backend may not be ready yet..."
 fi
 
 # Start frontend
